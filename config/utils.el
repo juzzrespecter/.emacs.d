@@ -8,4 +8,8 @@
 (setq auto-save-file-name-transforms
       `((".*" ,(expand-file-name (concat dotfiles-dir "backups")))))
 
+;; display line numbers
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+
+;; everything ready to go
 (provide 'utils)
