@@ -12,15 +12,19 @@
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 ;; aesthetic choices
-(setq inhibit-startup-message t ; remove startup message
-      visible-bell nil)         ; remove bell
-
 (tool-bar-mode -1)   ; no toolbar
 (scroll-bar-mode -1) ; no scrollbar
 (menu-bar-mode -1)   ; no menu bar
 
 (hl-line-mode 1)        ; highlight line
 (blink-cursor-mode -1)  ; highlight cursor
+
+;; serious things
+(use-package nyan-mode
+  :config
+  (nyan-mode 1)
+  (nyan-start-animation)
+  :ensure t)
 
 ;; everything ready to go
 (provide 'utils)
