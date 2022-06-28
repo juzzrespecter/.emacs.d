@@ -77,3 +77,15 @@
 (require 'init-magit)
 (require 'init-term)
 (require 'init-lsp-mode)
+(require 'mode.docker)
+
+;; testing
+(defun log-test-func ()
+  (setq log-dir-v
+	(concat user-emacs-directory "log.txt"))
+  (append-to-file
+   (format "%s" (buffer-list)) nil log-dir-v)
+  (append-to-file
+   "\n" nil log-dir-v))
+
+(add-hook 'emacs-startup-hook 'log-test-func)
