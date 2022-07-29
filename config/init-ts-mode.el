@@ -2,7 +2,7 @@
   :mode "\\.ts\\'"
   :hook (typescript-mode . lsp-deferred)
   :config
-  (setq typescript-indent-level 2))
+  (setq typescript-indent-level 4))
 
 (defun setup-tide-mode ()
   (interactive)
@@ -26,4 +26,4 @@
 
 (setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
 
-(provide 'ts-mode)
+(provide 'init-ts-mode)

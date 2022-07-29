@@ -72,11 +72,12 @@
 (require 'utils)
 (require 'init-helm)
 (require 'c-mode)
-(require 'ts-mode)
+(require 'init-ts-mode)
 (require 'init-projectile)
 (require 'init-magit)
 (require 'init-term)
 (require 'init-lsp-mode)
+(require 'init-go-mode)
 (require 'mode.docker)
 
 ;; testing
