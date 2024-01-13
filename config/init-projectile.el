@@ -1,11 +1,15 @@
+;;; package --- Setup configuration for projectile
+;;; Commentary:
+
+;;; Code:
 (use-package projectile
-  :diminish projectile-mode
-  :config (projectile-mode)
-  :bind-keymap
-  ("C-c p" . projectile-command-map)
-  :init
-  (when (file-directory-p "~/Workspace")
-    (setq projectile-project-search-path '("~/Workspace")))
-  (setq projectile-switch-project-action #'projectile-dired))
+  :ensure t
+  :init (setq projectile-project-search-path '("~/Workspace"))
+  (projectile-mode +1)
+  :bind (:map projectile-mode-map
+              ("s-o" . projectile-command-map)
+              ("C-c p" . projectile-command-map)))
 
 (provide 'init-projectile)
+;;; init-projectile.el ends here
+

@@ -1,3 +1,4 @@
-(use-package org)
+;; placeholder
+
 
 (provide 'init-org-mode)
